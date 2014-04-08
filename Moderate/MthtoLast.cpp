@@ -17,11 +17,10 @@ a
 g
 
 */
-#include <vector>
-#include <cstdio>
 #include <cstdlib>
 #include <cstring>
 #include <fstream>
+#include <iostream>
 #include <string>
 #include <vector>
 
@@ -33,12 +32,25 @@ int main(int argc, char *argv[]){
 	file.open(argv[1]);
 	while (!file.eof()){
 		getline(file, lineBuffer);
-		if (line.length() == 0)
+		if (lineBuffer.length() == 0)
 			continue;
 		else{
 			vector<string> str;
 			string spaces = " ";
-			size
+			int p;
+			int q = 0;
+			while (q!= string::npos){
+				p = q + 1;
+				q = lineBuffer.find_first_of(spaces, p);
+				str.push_back(lineBuffer.substr(p, q-p));
+			}
+			int m = atoi(str.back().c_str());
+			str.pop_back();
+			if (m > str.size())
+				continue;
+			else {
+				cout << str.at(str.size() - m) << endl;
+			}
 		}
 	}
 }
