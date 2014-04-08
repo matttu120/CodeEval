@@ -1,4 +1,8 @@
 ﻿/*
+﻿
+﻿THIS SOLUTION DOES NOT WORK.
+﻿
+﻿
 DISCOUNT OFFERS
 CHALLENGE DESCRIPTION:
 Our marketing department has just negotiated a deal with several local merchants that will allow us to offer exclusive discounts on various products to our top customers every day. The catch is that we can only offer each product to one customer and we may only offer one product to each customer. 
